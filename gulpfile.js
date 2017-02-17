@@ -6,6 +6,7 @@ const jade = require('gulp-jade');
 const autoprefixer = require('gulp-autoprefixer');
 const del = require('del');
 const newer = require('gulp-newer');
+const browserSync = require('browser-sync').create();
 
 gulp.task('style', function () {
   return gulp.src('development/scss/style.scss')
@@ -32,6 +33,15 @@ gulp.task('assets', function() {
 
 gulp.task('watch', function() {
   gulp.watch('development/scss/**/*.scss', gulp.series('style'));
+  gulp.watch('development/pages/*.jade', gulp.series('jade'));
+});
+
+gulp.task('server', function () {
+  browserSync.init({
+    server: 'public'
+  });
+
+  browserSync.watch('public/**/*.*').on('change', browserSync.reload);
 });
 
 gulp.task('build',
@@ -48,6 +58,9 @@ gulp.task('build',
 gulp.task('dv',
   gulp.series(
     'build',
-    'watch'
+    gulp.parallel(
+      'watch',
+      'server'
+    )
   )
 );
