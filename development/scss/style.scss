@@ -1,3 +1,14 @@
+@import "_common/_variables";
+@import "_mixin/_mixin";
 @import "_common/_common";
+@import "_partials/_loader";
+@import "_partials/_nav";
 
 // Style
+
+body {
+  font-family: Ubuntu;
+  font-weight: 700;
+  background-color: #000;
+  color: #fff;
+}

@@ -8,6 +8,18 @@ const del = require('del');
 const newer = require('gulp-newer');
 const browserSync = require('browser-sync').create();
 
+function log(error) {
+    console.log([
+        '',
+        "----------ERROR MESSAGE START----------",
+        ("[" + error.name + " in " + error.plugin + "]"),
+        error.message,
+        "----------ERROR MESSAGE END----------",
+        ''
+    ].join('\n'));
+    this.end();
+}
+
 gulp.task('style', function () {
   return gulp.src('development/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
@@ -16,9 +28,10 @@ gulp.task('style', function () {
 });
 
 gulp.task('jade', function() {
-    return gulp.src('development/pages/**/*.jade')
-        .pipe(jade())
-        .pipe(gulp.dest('public/pages'));
+  return gulp.src('development/pages/*.jade')
+    .pipe(jade())
+    .on('error', log)
+    .pipe(gulp.dest('public'));
 });
 
 gulp.task('clean', function() {
@@ -33,7 +46,7 @@ gulp.task('assets', function() {
 
 gulp.task('watch', function() {
   gulp.watch('development/scss/**/*.scss', gulp.series('style'));
-  gulp.watch('development/pages/*.jade', gulp.series('jade'));
+  gulp.watch('development/pages/**/*.jade', gulp.series('jade'));
 });
 
 gulp.task('server', function () {
