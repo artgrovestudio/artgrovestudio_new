@@ -260,45 +260,59 @@ html, body {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
     .nav .slide-nav .arrow-prev,
-    .nav .slide-nav .arrow-next {
+    .nav .slide-nav .arrow-next,
+    .nav .slide-nav .arrow-last,
+    .nav .slide-nav .arrow-first {
       pointer-events: auto;
       cursor: pointer;
       height: 36px;
       width: 21px;
       position: absolute; }
-    .nav .slide-nav .arrow-prev {
+    .nav .slide-nav .arrow-prev,
+    .nav .slide-nav .arrow-last {
       background-image: url("../assets/img/icon/prev.png"); }
       @media only screen and (max-width: 768px) {
-        .nav .slide-nav .arrow-prev {
+        .nav .slide-nav .arrow-prev,
+        .nav .slide-nav .arrow-last {
           left: 25px; } }
       @media only screen and (min-width: 769px) {
-        .nav .slide-nav .arrow-prev {
+        .nav .slide-nav .arrow-prev,
+        .nav .slide-nav .arrow-last {
           left: 30px; } }
       @media only screen and (min-width: 992px) {
-        .nav .slide-nav .arrow-prev {
+        .nav .slide-nav .arrow-prev,
+        .nav .slide-nav .arrow-last {
           left: 40px; } }
       @media only screen and (min-width: 1200px) {
-        .nav .slide-nav .arrow-prev {
+        .nav .slide-nav .arrow-prev,
+        .nav .slide-nav .arrow-last {
           left: 45px; } }
       @media only screen and (min-width: 1600px) {
-        .nav .slide-nav .arrow-prev {
+        .nav .slide-nav .arrow-prev,
+        .nav .slide-nav .arrow-last {
           left: 80px; } }
-    .nav .slide-nav .arrow-next {
+    .nav .slide-nav .arrow-next,
+    .nav .slide-nav .arrow-first {
       background-image: url("../assets/img/icon/next.png"); }
       @media only screen and (max-width: 768px) {
-        .nav .slide-nav .arrow-next {
+        .nav .slide-nav .arrow-next,
+        .nav .slide-nav .arrow-first {
           right: 25px; } }
       @media only screen and (min-width: 769px) {
-        .nav .slide-nav .arrow-next {
+        .nav .slide-nav .arrow-next,
+        .nav .slide-nav .arrow-first {
           right: 30px; } }
       @media only screen and (min-width: 992px) {
-        .nav .slide-nav .arrow-next {
+        .nav .slide-nav .arrow-next,
+        .nav .slide-nav .arrow-first {
           right: 40px; } }
       @media only screen and (min-width: 1200px) {
-        .nav .slide-nav .arrow-next {
+        .nav .slide-nav .arrow-next,
+        .nav .slide-nav .arrow-first {
           right: 45px; } }
       @media only screen and (min-width: 1600px) {
-        .nav .slide-nav .arrow-next {
+        .nav .slide-nav .arrow-next,
+        .nav .slide-nav .arrow-first {
           right: 80px; } }
   .nav .social-media {
     position: absolute; }
@@ -407,15 +421,16 @@ html, body {
           .nav .phone a p {
             font-size: 16px; } }
 
-#projects .project-bg {
-  width: 100%;
-  height: 100%;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../assets/img/Strakhovskiy.jpg");
+#projects #pagepiling .section {
+  /* the important one*/
+  background-attachment: fixed;
+  background-size: cover;
   background-position: center;
-  background-size: cover; }
-  #projects .project-bg .gradient {
+  background-repeat: no-repeat; }
+
+#projects #pagepiling .strakhovskyi {
+  background-image: url("../assets/img/Strakhovskiy.jpg"); }
+  #projects #pagepiling .strakhovskyi .gradient {
     width: 100%;
     height: 100%;
     opacity: .9;

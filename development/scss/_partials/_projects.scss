@@ -1,20 +1,24 @@
 // Projects style
 
 #projects {
-  .project-bg {
-    width: 100%;
-    height: 100%;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../assets/img/Strakhovskiy.jpg');
-    background-position: center;
-    background-size: cover;
+  #pagepiling {
+    .section {
+      /* the important one*/
+			background-attachment: fixed;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+    }
 
-    .gradient {
-      width: 100%;
-      height: 100%;
-      opacity: .9;
-      @include gradient-directional(#3c95e8, #1b7ad2, -45deg);
+    .strakhovskyi {
+      background-image: url('../assets/img/Strakhovskiy.jpg');
+
+      .gradient {
+        width: 100%;
+        height: 100%;
+        opacity: .9;
+        @include gradient-directional(#3c95e8, #1b7ad2, -45deg);
+      }
     }
   }
 }

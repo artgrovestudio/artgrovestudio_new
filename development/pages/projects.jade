@@ -41,6 +41,12 @@ html
         $('.arrow-prev').click(function () {
           $.fn.pagepiling.moveSectionUp();
         });
+        $('.arrow-first').click(function () {
+          $.fn.pagepiling.moveTo(1);
+        });
+        $('.arrow-last').click(function () {
+          $.fn.pagepiling.moveTo(4);
+        });
       });
 
   body(id='#{pageIndex}')
@@ -51,7 +57,8 @@ html
     include _includes/_nav
     
     #pagepiling
-      .section
+      .section.strakhovskyi
+        .gradient
       .section  
       .section
       .section 

@@ -58,7 +58,9 @@
     @include align(c, c);
 
     .arrow-prev,
-    .arrow-next {
+    .arrow-next,
+    .arrow-last,
+    .arrow-first {
       pointer-events: auto;
       cursor: pointer;
       height: 36px;
@@ -66,12 +68,14 @@
       position: absolute;
     }
 
-    .arrow-prev {
+    .arrow-prev,
+    .arrow-last {
       @include backdown("left");
       background-image: url('../assets/img/icon/prev.png');
     }
 
-    .arrow-next {
+    .arrow-next,
+    .arrow-first {
       @include backdown("right");
       background-image: url('../assets/img/icon/next.png');
     }
