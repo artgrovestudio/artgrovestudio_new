@@ -21,7 +21,7 @@ function log(error) {
 }
 
 gulp.task('style', function () {
-  return gulp.src('development/scss/style.scss')
+  return gulp.src('development/scss/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest('public/css'));

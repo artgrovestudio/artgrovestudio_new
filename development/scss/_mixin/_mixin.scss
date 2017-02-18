@@ -4,7 +4,7 @@
       @content;
     }
   } @else if $type == 'mobile' {
-    @media only screen and (max-width: 769px) {
+    @media only screen and (max-width: 768px) {
       @content;
     }
   } @else if $type == 'tablet' {
@@ -41,6 +41,50 @@
   }
   @include device('large-desktop') {
     font-size: $large-desktop;
+  }
+}
+
+@mixin align($horisontal, $vertical) {
+  @if $horisontal == 'c' and  $vertical == 'c'{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @else if $horisontal == 'l' and  $vertical == 't'{
+    top: 0;
+    left: 0;
+  }
+  @else if $horisontal == 'c' and  $vertical == 't'{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @else if $horisontal == 'r' and  $vertical == 't'{
+    top: 0;
+    right: 0;
+  }
+  @else if $horisontal == 'l' and  $vertical == 'c'{
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  @else if $horisontal == 'r' and  $vertical == 'c'{
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  @else if $horisontal == 'l' and  $vertical == 'b'{
+    bottom: 0;
+    left: 0;
+  }
+  @else if $horisontal == 'c' and  $vertical == 'b'{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @else if $horisontal == 'r' and  $vertical == 'b'{
+    bottom: 0;
+    right: 0;
   }
 }
 
