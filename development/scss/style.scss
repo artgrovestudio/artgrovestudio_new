@@ -2,6 +2,7 @@
 @import "_mixin/_mixin";
 @import "_mixin/_gradient";
 @import "_common/_common";
+@import "_common/_pagepilling";
 @import "_partials/_nav";
 @import "_partials/_projects";
 
@@ -10,6 +11,5 @@
 body {
   font-family: Ubuntu;
   font-weight: 700;
-  background-color: #000;
   color: #fff;
 }

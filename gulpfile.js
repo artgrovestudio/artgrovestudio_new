@@ -44,6 +44,12 @@ gulp.task('assets', function() {
   .pipe(gulp.dest('public/assets'));
 });
 
+gulp.task('js', function() {
+  return gulp.src('development/js/*.*', {since: gulp.lastRun('assets')})
+  .pipe(newer('public/js'))
+  .pipe(gulp.dest('public/js'));
+});
+
 gulp.task('watch', function() {
   gulp.watch('development/scss/**/*.scss', gulp.series('style'));
   gulp.watch('development/pages/**/*.jade', gulp.series('jade'));
@@ -62,6 +68,7 @@ gulp.task('build',
     'clean',
     gulp.parallel(
       'style',
+      'js',
       'assets',
       'jade'
     )

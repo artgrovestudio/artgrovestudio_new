@@ -51,6 +51,32 @@
     }
   }
 
+  .slide-nav {
+    position: fixed;
+    width: 100%;
+    height: 36px;
+    @include align(c, c);
+
+    .arrow-prev,
+    .arrow-next {
+      pointer-events: auto;
+      cursor: pointer;
+      height: 36px;
+      width: 21px;
+      position: absolute;
+    }
+
+    .arrow-prev {
+      @include backdown("left");
+      background-image: url('../assets/img/icon/prev.png');
+    }
+
+    .arrow-next {
+      @include backdown("right");
+      background-image: url('../assets/img/icon/next.png');
+    }
+  }
+
   .social-media {
     position: absolute;
     @include backdown("bottom");
