@@ -2,7 +2,9 @@ body, html {
   padding: 0;
   margin: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  background-color: #000;
+  color: #fff; }
 
 a {
   text-decoration: none; }
@@ -38,15 +40,38 @@ html, body {
 #pp-nav {
   position: fixed;
   z-index: 100;
-  margin-top: -32px;
-  top: 50%;
   opacity: 1; }
 
 #pp-nav.right {
-  right: 17px; }
+  right: 17px;
+  top: 50%;
+  margin-top: -32px; }
 
 #pp-nav.left {
-  left: 17px; }
+  left: 17px;
+  top: 50%;
+  margin-top: -32px; }
+
+#pp-nav.bottom {
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+  @media only screen and (max-width: 768px) {
+    #pp-nav.bottom {
+      bottom: 25px; } }
+  @media only screen and (min-width: 769px) {
+    #pp-nav.bottom {
+      bottom: 30px; } }
+  @media only screen and (min-width: 992px) {
+    #pp-nav.bottom {
+      bottom: 40px; } }
+  @media only screen and (min-width: 1200px) {
+    #pp-nav.bottom {
+      bottom: 45px; } }
+  @media only screen and (min-width: 1600px) {
+    #pp-nav.bottom {
+      bottom: 80px; } }
 
 .pp-section.pp-table {
   display: table; }
@@ -76,10 +101,10 @@ html, body {
 
 #pp-nav li,
 .pp-slidesNav li {
-  display: block;
+  display: inline-block;
   width: 14px;
   height: 13px;
-  margin: 7px;
+  margin: 5px;
   position: relative; }
 
 .pp-slidesNav li {
@@ -107,7 +132,6 @@ html, body {
   height: 8px;
   border: 1px solid #fff;
   background: transparent;
-  border-radius: 50%;
   position: absolute;
   z-index: 1; }
 
@@ -427,9 +451,22 @@ html, body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+  #projects #pagepiling .section .project {
+    position: absolute;
+    z-index: 50;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 50%;
+    width: 50%; }
+    #projects #pagepiling .section .project img {
+      max-height: 100%; }
+    #projects #pagepiling .section .project::after {
+      content: "Strakhovskyi"; }
 
 #projects #pagepiling .strakhovskyi {
-  background-image: url("../assets/img/Strakhovskiy.jpg"); }
+  background-image: url("../assets/img/strakhovskyi-bg.jpg"); }
   #projects #pagepiling .strakhovskyi .gradient {
     width: 100%;
     height: 100%;

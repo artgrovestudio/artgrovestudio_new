@@ -34,15 +34,21 @@ html, body {
 #pp-nav {
     position: fixed;
     z-index: 100;
-    margin-top: -32px;
-    top: 50%;
     opacity: 1;
 }
 #pp-nav.right {
     right: 17px;
+    top: 50%;
+    margin-top: -32px;
 }
 #pp-nav.left {
     left: 17px;
+    top: 50%;
+    margin-top: -32px;
+}
+#pp-nav.bottom {
+    @include backdown("bottom");
+    @include align(c, b);
 }
 .pp-section.pp-table{
     display: table;
@@ -72,10 +78,10 @@ html, body {
 }
 #pp-nav li,
 .pp-slidesNav li {
-    display: block;
+    display: inline-block;
     width: 14px;
     height: 13px;
-    margin: 7px;
+    margin: 5px;
     position:relative;
 }
 .pp-slidesNav li {
@@ -103,7 +109,6 @@ html, body {
     height: 8px;
     border: 1px solid #fff;
     background: rgba(0, 0, 0, 0);
-    border-radius: 50%;
     position: absolute;
     z-index: 1;
 }

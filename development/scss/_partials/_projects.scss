@@ -8,10 +8,26 @@
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
+
+      .project {
+        position: absolute;
+        z-index: 50;
+        @include align(c, c);
+        height: 50%;
+        width: 50%;
+
+        img {
+          max-height: 100%;
+        }
+
+        &::after {
+          content: "Strakhovskyi"
+        }
+      }
     }
 
     .strakhovskyi {
-      background-image: url('../assets/img/Strakhovskiy.jpg');
+      background-image: url('../assets/img/strakhovskyi-bg.jpg');
 
       .gradient {
         width: 100%;
