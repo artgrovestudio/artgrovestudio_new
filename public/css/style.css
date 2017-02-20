@@ -155,63 +155,52 @@ html, body {
   height: 100%; }
 
 .nav {
-  box-sizing: border-box;
   pointer-events: none;
   position: fixed;
-  height: 100%;
-  width: 100%;
-  height: 100vh;
-  width: 100vw;
   top: 0;
   left: 0;
   z-index: 99999; }
   @media only screen and (max-width: 768px) {
     .nav {
-      padding: 25px; } }
+      margin: 25px; } }
   @media only screen and (min-width: 769px) {
     .nav {
-      padding: 30px; } }
+      margin: 30px; } }
   @media only screen and (min-width: 992px) {
     .nav {
-      padding: 40px; } }
+      margin: 40px; } }
   @media only screen and (min-width: 1200px) {
     .nav {
-      padding: 45px; } }
+      margin: 45px; } }
   @media only screen and (min-width: 1600px) {
     .nav {
-      padding: 80px; } }
+      margin: 80px; } }
+  @media only screen and (max-width: 768px) {
+    .nav {
+      width: calc(100% - (25px * 2));
+      height: calc(100% - (25px * 2)); } }
+  @media only screen and (min-width: 769px) {
+    .nav {
+      width: calc(100% - (30px * 2));
+      height: calc(100% - (30px * 2)); } }
+  @media only screen and (min-width: 992px) {
+    .nav {
+      width: calc(100% - (40px * 2));
+      height: calc(100% - (40px * 2)); } }
+  @media only screen and (min-width: 1200px) {
+    .nav {
+      width: calc(100% - (45px * 2));
+      height: calc(100% - (45px * 2)); } }
+  @media only screen and (min-width: 1600px) {
+    .nav {
+      width: calc(100% - (80px * 2));
+      height: calc(100% - (80px * 2)); } }
   .nav .logo {
-    position: absolute; }
-    @media only screen and (max-width: 768px) {
-      .nav .logo {
-        top: 25px; } }
-    @media only screen and (min-width: 769px) {
-      .nav .logo {
-        top: 30px; } }
-    @media only screen and (min-width: 992px) {
-      .nav .logo {
-        top: 40px; } }
-    @media only screen and (min-width: 1200px) {
-      .nav .logo {
-        top: 45px; } }
-    @media only screen and (min-width: 1600px) {
-      .nav .logo {
-        top: 80px; } }
-    @media only screen and (max-width: 768px) {
-      .nav .logo {
-        left: 25px; } }
-    @media only screen and (min-width: 769px) {
-      .nav .logo {
-        left: 30px; } }
-    @media only screen and (min-width: 992px) {
-      .nav .logo {
-        left: 40px; } }
-    @media only screen and (min-width: 1200px) {
-      .nav .logo {
-        left: 45px; } }
-    @media only screen and (min-width: 1600px) {
-      .nav .logo {
-        left: 80px; } }
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
     .nav .logo a {
       pointer-events: auto;
       color: #fff; }
@@ -235,39 +224,12 @@ html, body {
           .nav .logo a p {
             font-size: 30px; } }
   .nav .hamburger {
+    display: none;
     pointer-events: auto;
     cursor: pointer;
-    position: absolute; }
-    @media only screen and (max-width: 768px) {
-      .nav .hamburger {
-        top: 25px; } }
-    @media only screen and (min-width: 769px) {
-      .nav .hamburger {
-        top: 30px; } }
-    @media only screen and (min-width: 992px) {
-      .nav .hamburger {
-        top: 40px; } }
-    @media only screen and (min-width: 1200px) {
-      .nav .hamburger {
-        top: 45px; } }
-    @media only screen and (min-width: 1600px) {
-      .nav .hamburger {
-        top: 80px; } }
-    @media only screen and (max-width: 768px) {
-      .nav .hamburger {
-        right: 25px; } }
-    @media only screen and (min-width: 769px) {
-      .nav .hamburger {
-        right: 30px; } }
-    @media only screen and (min-width: 992px) {
-      .nav .hamburger {
-        right: 40px; } }
-    @media only screen and (min-width: 1200px) {
-      .nav .hamburger {
-        right: 45px; } }
-    @media only screen and (min-width: 1600px) {
-      .nav .hamburger {
-        right: 80px; } }
+    position: absolute;
+    top: 0;
+    right: 0; }
     .nav .hamburger .line {
       height: 3px;
       width: 45px;
@@ -276,7 +238,8 @@ html, body {
       .nav .hamburger .line:last-child {
         margin-bottom: 0; }
   .nav .slide-nav {
-    position: fixed;
+    display: none;
+    position: absolute;
     width: 100%;
     height: 36px;
     top: 50%;
@@ -294,87 +257,23 @@ html, body {
       position: absolute; }
     .nav .slide-nav .arrow-prev,
     .nav .slide-nav .arrow-last {
-      background-image: url("../assets/img/icon/prev.png"); }
-      @media only screen and (max-width: 768px) {
-        .nav .slide-nav .arrow-prev,
-        .nav .slide-nav .arrow-last {
-          left: 25px; } }
-      @media only screen and (min-width: 769px) {
-        .nav .slide-nav .arrow-prev,
-        .nav .slide-nav .arrow-last {
-          left: 30px; } }
-      @media only screen and (min-width: 992px) {
-        .nav .slide-nav .arrow-prev,
-        .nav .slide-nav .arrow-last {
-          left: 40px; } }
-      @media only screen and (min-width: 1200px) {
-        .nav .slide-nav .arrow-prev,
-        .nav .slide-nav .arrow-last {
-          left: 45px; } }
-      @media only screen and (min-width: 1600px) {
-        .nav .slide-nav .arrow-prev,
-        .nav .slide-nav .arrow-last {
-          left: 80px; } }
+      background-image: url("../assets/img/icon/prev.png");
+      left: 0; }
     .nav .slide-nav .arrow-next,
     .nav .slide-nav .arrow-first {
+      right: 0;
       background-image: url("../assets/img/icon/next.png"); }
-      @media only screen and (max-width: 768px) {
-        .nav .slide-nav .arrow-next,
-        .nav .slide-nav .arrow-first {
-          right: 25px; } }
-      @media only screen and (min-width: 769px) {
-        .nav .slide-nav .arrow-next,
-        .nav .slide-nav .arrow-first {
-          right: 30px; } }
-      @media only screen and (min-width: 992px) {
-        .nav .slide-nav .arrow-next,
-        .nav .slide-nav .arrow-first {
-          right: 40px; } }
-      @media only screen and (min-width: 1200px) {
-        .nav .slide-nav .arrow-next,
-        .nav .slide-nav .arrow-first {
-          right: 45px; } }
-      @media only screen and (min-width: 1600px) {
-        .nav .slide-nav .arrow-next,
-        .nav .slide-nav .arrow-first {
-          right: 80px; } }
   .nav .social-media {
-    position: absolute; }
-    @media only screen and (max-width: 768px) {
-      .nav .social-media {
-        bottom: 25px; } }
-    @media only screen and (min-width: 769px) {
-      .nav .social-media {
-        bottom: 30px; } }
-    @media only screen and (min-width: 992px) {
-      .nav .social-media {
-        bottom: 40px; } }
-    @media only screen and (min-width: 1200px) {
-      .nav .social-media {
-        bottom: 45px; } }
-    @media only screen and (min-width: 1600px) {
-      .nav .social-media {
-        bottom: 80px; } }
-    @media only screen and (max-width: 768px) {
-      .nav .social-media {
-        left: 25px; } }
-    @media only screen and (min-width: 769px) {
-      .nav .social-media {
-        left: 30px; } }
-    @media only screen and (min-width: 992px) {
-      .nav .social-media {
-        left: 40px; } }
-    @media only screen and (min-width: 1200px) {
-      .nav .social-media {
-        left: 45px; } }
-    @media only screen and (min-width: 1600px) {
-      .nav .social-media {
-        left: 80px; } }
+    position: absolute;
+    bottom: 0;
+    left: 0; }
     .nav .social-media a {
       pointer-events: auto;
       color: #fff; }
       .nav .social-media a p {
         display: inline-block;
+        padding: 0;
+        margin: 0;
         margin-right: 20px;
         font-weight: 700; }
         @media only screen and (max-width: 768px) {
@@ -393,42 +292,16 @@ html, body {
           .nav .social-media a p {
             font-size: 16px; } }
   .nav .phone {
-    position: absolute; }
-    @media only screen and (max-width: 768px) {
-      .nav .phone {
-        bottom: 25px; } }
-    @media only screen and (min-width: 769px) {
-      .nav .phone {
-        bottom: 30px; } }
-    @media only screen and (min-width: 992px) {
-      .nav .phone {
-        bottom: 40px; } }
-    @media only screen and (min-width: 1200px) {
-      .nav .phone {
-        bottom: 45px; } }
-    @media only screen and (min-width: 1600px) {
-      .nav .phone {
-        bottom: 80px; } }
-    @media only screen and (max-width: 768px) {
-      .nav .phone {
-        right: 25px; } }
-    @media only screen and (min-width: 769px) {
-      .nav .phone {
-        right: 30px; } }
-    @media only screen and (min-width: 992px) {
-      .nav .phone {
-        right: 40px; } }
-    @media only screen and (min-width: 1200px) {
-      .nav .phone {
-        right: 45px; } }
-    @media only screen and (min-width: 1600px) {
-      .nav .phone {
-        right: 80px; } }
+    position: absolute;
+    bottom: 0;
+    right: 0; }
     .nav .phone a {
       pointer-events: auto;
       color: #fff; }
       .nav .phone a p {
-        font-weight: 700; }
+        font-weight: 700;
+        padding: 0;
+        margin: 0; }
         @media only screen and (max-width: 768px) {
           .nav .phone a p {
             font-size: 10px; } }
@@ -461,9 +334,22 @@ html, body {
     height: 50%;
     width: 50%; }
     #projects #pagepiling .section .project img {
-      max-height: 100%; }
-    #projects #pagepiling .section .project::after {
-      content: "Strakhovskyi"; }
+      height: auto;
+      width: auto;
+      max-width: 100%;
+      max-height: 100%;
+      margin-left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+    #projects #pagepiling .section .project a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 0;
+      margin: 0; }
+      #projects #pagepiling .section .project a h2 {
+        font-size: 36px;
+        margin-top: 40px; }
 
 #projects #pagepiling .strakhovskyi {
   background-image: url("../assets/img/strakhovskyi-bg.jpg"); }

@@ -47,11 +47,8 @@ html
         });
       });
 
-  body(id='#{pageIndex}')
-    //- .project-bg
-    //-   .gradient
-      
-    //include _includes/_loader
+  body(id='#{pageIndex}')      
+    include _includes/_loader
     include _includes/_nav
     
     #pagepiling
@@ -59,10 +56,11 @@ html
         .gradient
         .project
           img(src="assets/img/strakhovskyi-mockup.png", alt="alt")
-          .project-name
-      .section  
-      .section
+          a(href="https://www.behance.net/gallery/47555307/Andrey-Strakhovskyi-design-by-Art-Grove-Studio") 
+            h2 Андрей Страховский
       .section 
+      .section
+      .section
        
     
     // GSAP
