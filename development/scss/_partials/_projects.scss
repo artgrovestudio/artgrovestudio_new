@@ -1,54 +1,58 @@
 // Projects style
 
 #projects {
-  #pagepiling {
+  #fullpage {
     .section {
-      /* the important one*/
-			background-attachment: fixed;
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
+      .project-bg {
+        position: fixed;
+        @include align(c,c);
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('../assets/img/strakhovskyi-bg.jpg');
+
+        .gradient {
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          @include gradient-directional(#3c95e8, #1b7ad2, 135deg);
+          opacity: .9;
+        }
+      }
 
       .project {
-        position: absolute;
-        z-index: 50;
-        @include align(c, c);
-        height: 50%;
-        width: 50%;
+        position: relative;
 
         img {
           height: auto;
           width: auto;
-          max-width: 100%;
-          max-height: 100%;
+          max-width: 50%;
+          max-height: 50%;
           margin-left: 50%;
           transform: translateX(-50%);
         }
 
         a {
-          display: block;
           color: $white-color;
-          text-align: center;
-          padding: 0;
-          margin: 0;
 
           h2 {
             font-size: 36px;
-            margin-top: 40px;
+            text-align: center;
+            margin-top: 60px;
           }
         }
       }
     }
-
-    .strakhovskyi {
-      background-image: url('../assets/img/strakhovskyi-bg.jpg');
-
-      .gradient {
-        width: 100%;
-        height: 100%;
-        opacity: .9;
-        @include gradient-directional(#3c95e8, #1b7ad2, -45deg);
-      }
-    }
   }
 }
+
+// img {
+//   height: auto;
+//   width: auto;
+//   max-width: 100%;
+//   max-height: 100%;
+//   margin-left: 50%;
+//   transform: translateX(-50%);
+// }

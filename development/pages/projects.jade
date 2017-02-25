@@ -15,54 +15,35 @@ html
     // Style		
     link(rel='stylesheet', type='text/css', href='css/loader.css')
     link(rel='stylesheet', type='text/css', href='css/style.css')
-    
-    // Animate.css
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
-
-    // JQuery
-    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
-    
-    // PagePilling
-    script(type='text/javascript', src='assets/js/jquery.pagepiling.js')
-    
-    // PagePilling Setting
-    script(type='text/javascript').
-      $(document).ready(function() {
-        $('#pagepiling').pagepiling({
-          direction: 'horizontal',
-          anchors: ['strakhovskyi', 'module', 'tiny', 'kit'],
-          sectionsColor: ['#f2f2f2', '#4BBFC3', '#555', '#222'],
-          navigation: {
-            'bulletsColor': '#fff',
-            'position': 'bottom',
-            'tooltips': false
-          }
-        });
-        
-        $('.arrow-next').click(function () {
-          $.fn.pagepiling.moveSectionDown();
-        });
-        $('.arrow-prev').click(function () {
-          $.fn.pagepiling.moveSectionUp();
-        });
-      });
 
   body(id='#{pageIndex}')      
     include _includes/_loader
     include _includes/_nav
     
-    #pagepiling
-      .section.strakhovskyi
-        .gradient
+    #fullpage
+      .section
+        .project-bg
+          .gradient
+        .project.strakhovskyi
+          img(src="assets/img/strakhovskyi-mockup.png", alt="alt")
+          a(href="https://www.behance.net/gallery/47555307/Andrey-Strakhovskyi-design-by-Art-Grove-Studio") 
+            h2 Андрей Страховский
         .project
           img(src="assets/img/strakhovskyi-mockup.png", alt="alt")
           a(href="https://www.behance.net/gallery/47555307/Andrey-Strakhovskyi-design-by-Art-Grove-Studio") 
             h2 Андрей Страховский
-      .section 
-      .section
-      .section
-       
+        .project
+          img(src="assets/img/strakhovskyi-mockup.png", alt="alt")
+          a(href="https://www.behance.net/gallery/47555307/Andrey-Strakhovskyi-design-by-Art-Grove-Studio") 
+            h2 Андрей Страховский
+            
     
+    // JQuery
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')    
+    // PagePilling
+    script(type='text/javascript', src='assets/js/jquery.fullPage.js')       
+    // PagePilling Setting
+    script(type='text/javascript', src='js/fullPageInit.js')    
     // GSAP
     script(src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js')
     script(src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js')
